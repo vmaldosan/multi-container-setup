@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t vmaldosan/react-test -f Dockerfile.dev .
+  - docker build -t vmaldosan/react-test -f ./client/Dockerfile.dev ./client
 
 script:
   - docker run -e CI=true vmaldosan/react-test npm run test
